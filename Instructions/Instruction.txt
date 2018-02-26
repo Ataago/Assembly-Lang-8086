@@ -1,0 +1,61 @@
+;8086 instructions
+
+INT 21h / AH=1 	READ CHARACTER ECHO
+	
+	mov ah,01h	;result is in AL
+	int 21h
+
+
+INT 21h / AH=2 	DISPLAY CHARACTER
+
+	mov ah,02h	
+	mov dl,'a'	;Character to be displayed in dl
+	int 21h 
+
+
+INT 21h / AH=9 	DISPLAY STRING
+
+	lea dx,msg	;store msg in address in dx
+	mov ah,09h
+	int 21h
+
+
+INT 21h / AH=2Ah SYSTEM DATE
+	
+	mov ah,2ah	;cx:yyyy (1980-2099)
+	int 21h		;dh:dl::mm:dd
+			;al:01h (week number)
+
+
+INT 21h / AH=2Ch 	SYSTEM TIME
+
+	mov ah,2ch	;ch:cl::hh:mm
+	int 21h		;dh:dl::ss:ms
+
+
+INT 21h / AH=0Ah	READ A STRING
+	
+	lea dx,buff
+	mov ah,0ah	
+	int 21h
+
+
+INT 10h / AH = 2 	SET CURSOR
+	
+	mov ah,02h
+	mov bh,00h	;page number
+	mov dh,12d	;row 
+	mov dl,39d	;col
+	int 10h
+
+
+INT 10h/AH = 06h	SCROLL UP WINDOW/CLEAR WINDOW
+
+	mov ah,06h
+	mov al,00h	;scroll no. lines - 00h for entire screen
+	mov bh,--h	;display attributes 
+	mov ch,00h	;row top left
+	mov cl,00h	;col top left
+	mov dh,00h	;row bottom right
+	mov dl,00h	;col bottom right
+	int 10h
