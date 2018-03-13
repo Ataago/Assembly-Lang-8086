@@ -75,7 +75,7 @@ read_8bit proc near
 	mov AH,01h		;reading 1st nibble
 	int 21h
 	sub AL,30h
-	mov BL,AL
+	mov BL,AL		;temporary storage
 	mov AH,01h		;reading 2nd Nibble
 	int 21h
 	sub AL,30h

@@ -20,6 +20,13 @@ INT 21h / AH=9 	DISPLAY STRING
 	int 21h
 
 
+INT 21h / AH=0Ah	READ A STRING
+	
+	lea dx,buff
+	mov ah,0ah	
+	int 21h
+
+
 INT 21h / AH=2Ah SYSTEM DATE
 	
 	mov ah,2ah	;cx:yyyy (1980-2099)
@@ -33,14 +40,7 @@ INT 21h / AH=2Ch 	SYSTEM TIME
 	int 21h		;dh:dl::ss:ms
 
 
-INT 21h / AH=0Ah	READ A STRING
-	
-	lea dx,buff
-	mov ah,0ah	
-	int 21h
-
-
-INT 10h / AH = 2 	SET CURSOR
+INT 10h / AH = 02h 	SET CURSOR
 	
 	mov ah,02h
 	mov bh,00h	;page number
