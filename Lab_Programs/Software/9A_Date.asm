@@ -1,4 +1,5 @@
-;9a.	Develop an assembly level program to display the system date at the centre of the screen. 
+;9a.	Develop an assembly level program to display 
+;       the system date at the center of the screen. 
 
 ;@author Mohammed Ataaur Rahaman
 

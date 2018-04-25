@@ -13,6 +13,9 @@ INT 21h / AH=2 	DISPLAY CHARACTER
 	int 21h 
 
 
+INT 21h / AH=08h	READ CHARACTER FROM STD INPUT no echo
+
+
 INT 21h / AH=9 	DISPLAY STRING
 
 	lea dx,msg	;store msg in address in dx

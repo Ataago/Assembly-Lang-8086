@@ -51,7 +51,7 @@ read_8bit proc near
 read_8bit endp
 
 print_msg proc near
-	;store the address of message in dx
+	;store the address of message in DX
 	mov ah,09h
 	int 21h
 	ret

@@ -1,0 +1,13 @@
+Lab Programs for 8086 s/w
+
+@author: Mohammed Ataaur Rahaman
+no copy rights
+
+compiling and execution:
+
+-masm/zi filename.asm
+-link/co filename.obj
+-cv filename
+
+Feel free to share!!
+Have a nice programing day!
