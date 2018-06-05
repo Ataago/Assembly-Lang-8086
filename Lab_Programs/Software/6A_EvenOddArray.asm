@@ -24,7 +24,7 @@ loop1: 					;for i = n to 1
         mov AL,[BX]		;store ith element in al
         mov dl,02h	
         div DL			;divide ith element by 2
-        mov AL,[BX]		;restore ith in al to print preserving the remainder
+        mov AL,[BX]		;restore ith in al to print, while preserving the remainder
         cmp AH,00h		;if remainder equals 0 mov al to even array
         JE push_even	
 

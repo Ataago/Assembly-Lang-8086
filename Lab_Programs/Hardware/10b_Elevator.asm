@@ -92,7 +92,7 @@ TF:
 EXIT:
 	MOV AH,4CH
 	INT 21H
-;_______________________________________
+
 	
 REQUEST PROC NEAR
 	MOV DX,PB		;read from Port B

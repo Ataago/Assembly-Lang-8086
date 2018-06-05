@@ -58,8 +58,9 @@ LenNotEqual:
 	call printf
 	jmp exit
 
-Str_Equal:	lea dx,msg_s
-		call printf
+Str_Equal:	
+	lea dx,msg_s
+	call printf
 
 exit:	
 	lea dx,msg_len1		;printing length of string 1

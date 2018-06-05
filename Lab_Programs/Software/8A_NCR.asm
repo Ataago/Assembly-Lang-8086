@@ -11,8 +11,8 @@
 .model small
 .data
 
-n db 01h
-r db 01h
+n db 04h
+r db 02h
 msg_1 db 10,13,'nCr is : $'
 result db 00h
 .code

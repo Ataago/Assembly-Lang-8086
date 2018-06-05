@@ -55,7 +55,7 @@ L_Stack:			;pushing to stack
 	push DX			;push(remainder)
 	inc CX			;top++
 	cmp AX,0000h
-	JNE L_Stack		;jump if ax not equal to 0 
+JNE L_Stack		;jump if ax not equal to 0 
 	
 loop_pop:				;popping from stack
 		pop DX
