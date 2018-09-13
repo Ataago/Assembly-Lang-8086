@@ -11,7 +11,7 @@
 .model small
 .data
 
-n db 04h
+n db 07h
 r db 02h
 msg_1 db 10,13,'nCr is : $'
 result db 00h
@@ -33,16 +33,16 @@ int 21h
 ;recursive procedure to call NCR
 ncr proc near
 	
-	mov AL,n		;nCn right leaf node
+	mov AL,n		;nCn left leaf node
 	cmp r,AL		
 	JNE right_tree	
-	add result,01h	;Leaf node result++
+	inc result	;Leaf node result++
 	ret
 	
 	right_tree:
-	cmp r,00h		;nC0 left leaf node
+	cmp r,00h		;nC0 right leaf node
 	JNE main_fun
-	add result,01h	;Leaf node result++
+	inc result	;Leaf node result++
 	ret
 	
 	main_fun:	
